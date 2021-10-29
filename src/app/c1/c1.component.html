@@ -1,0 +1,33 @@
+<p>NEW Component c1 works!</p>
+<p>c1 works!</p>
+<input type="text" value="{{str1}}">
+<input type="text" [value]="str1">
+<input type="text" [(ngModel)]="str1">
+<input type="button" value="Click" (click)="f1()">
+{{str1}}<br><br>
+<span *ngIf="show==true">
+    <ul>    
+        <li *ngFor="let i of a1">
+            {{i}}
+        </li>
+    </ul>
+</span>
+{{c1title}}
+Num1={{num1}}<br>
+{{s2 | lowercase}}<br>
+{{n1}}<br>
+{{a1}}
+{{b1}}
+<br>
+<div>
+    <p>{{'some string' | titlecase}}</p> <!-- output is expected to be "Some String" -->    
+  </div>
+  <p>A: {{a | percent}}</p>
+  <div>
+    <p>{{str}}[0:4]: '{{str | slice:0:4}}' - output is expected to be 'abcd'</p>
+    <p>{{str}}[4:0]: '{{str | slice:4:0}}' - output is expected to be ''</p>
+    <p>{{str}}[-4]: '{{str | slice:-4}}' - output is expected to be 'ghij'</p>
+    <p>{{str}}[-4:-2]: '{{str | slice:-4:-2}}' - output is expected to be 'gh'</p>
+    <p>{{str}}[-100]: '{{str | slice:-100}}' - output is expected to be 'abcdefghij'</p>
+    <p>{{str}}[100]: '{{str | slice:100}}' - output is expected to be ''</p>
+  </div>
